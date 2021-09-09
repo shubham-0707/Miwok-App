@@ -19,7 +19,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     private int mColorResourceId;
 
-    public WordAdapter(Activity context, ArrayList<Word> words , int colorResourceId) {
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -58,17 +58,15 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // so that it can be shown in the ListView
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image1);
-        if(currentAndroidFlavor.hasImage()) {
+        if (currentAndroidFlavor.hasImage()) {
             imageView.setImageResource(currentAndroidFlavor.getImageResourceId());
             imageView.setVisibility(View.VISIBLE);
-        }
-        else
-        {
+        } else {
             imageView.setVisibility(View.GONE);
         }
 
         View textContainer = listItemView.findViewById(R.id.text_container);
-        int color = ContextCompat.getColor(getContext() , mColorResourceId);
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
         return listItemView;
     }
