@@ -7,4 +7,4 @@
 - Edit:
 - Added the pronunciation of every word in miwok language on every list item.
 - Also added the releaseAudioManager() method to release the resources when the audio is not in use...
-- Thank You.
+- Thank You
